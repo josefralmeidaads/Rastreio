@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components/native';
+import {ThemeProvider} from 'styled-components/native';
 import Routes from './src/routes/routes';
 import theme from './src/themes/theme';
 
@@ -9,6 +9,6 @@ const App: React.FC = () => {
       <Routes />
     </ThemeProvider>
   );
-}
+};
 
 export default App;

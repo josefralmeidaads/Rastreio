@@ -1,11 +1,10 @@
+import {TextProps, TouchableOpacity, TouchableOpacityProps} from 'react-native';
 
-import {  TextProps, TouchableOpacity,TouchableOpacityProps } from 'react-native';
-
-import styled, { css  } from 'styled-components/native';
+import styled, {css} from 'styled-components/native';
 import theme from '../../../themes/theme';
 
 interface ButtonProps extends TouchableOpacityProps {
-  selected?: boolean
+  selected?: boolean;
 }
 
 interface HeaderTextProps extends TextProps {
@@ -18,17 +17,20 @@ export const Button = styled.TouchableOpacity<ButtonProps>`
   align-items: center;
   justify-content: center;
   background-color: ${theme.colors.white};
-  border-color: #FFF;
+  border-color: #fff;
   border-width: 2px;
-  ${props => props.selected && css`
-    border-bottom-color: #000;
-  `};
+  ${props =>
+    props.selected &&
+    css`
+      border-bottom-color: #000;
+    `};
 `;
-
 
 export const TextButton = styled.Text<HeaderTextProps>`
   font-weight: bold;
-  ${props => props.selected && css`
-    color: #000;
-  `};
+  ${props =>
+    props.selected &&
+    css`
+      color: #000;
+    `};
 `;
